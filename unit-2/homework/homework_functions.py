@@ -1,3 +1,4 @@
+#function to count the number of occurences of a letter in a string
 def letter_count(string, letter):
     #count letter in string
     count = 0
@@ -6,12 +7,14 @@ def letter_count(string, letter):
             count += 1
     return count
 
+#function to count the number of words in a string
 def count_words(words):
     #split string into words
     list_words = words.split()
     #return length of list = num of words
     return len(list_words)
 
+#function to reverse a list
 def reverse_list(reversable):
     reversed = []
     for item in reversable:
@@ -19,9 +22,9 @@ def reverse_list(reversable):
         reversed.insert(0, item)
     return reversed
 
+#function to separate a list into two lists around a pivot
 def split_list(splitter, pivot):
-    high = []
-    low = []
+    high, low = [], []
     for num in splitter:
         #put numbers greater or equal to the pivot in high, and the rest in low
         if num >= pivot:
@@ -31,6 +34,7 @@ def split_list(splitter, pivot):
     #return a list of low and then high
     return [low, high]
 
+#function to check if a string is an isogram
 def is_isogram(isogram):
     for char in isogram:
         #if any letter shows up more than once it's not an isogram
